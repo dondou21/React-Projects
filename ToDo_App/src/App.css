@@ -5,38 +5,50 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputTodos {
+  position: relative;
+  display: flex;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 600px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.inputTodos input {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 500px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  background-color: #f8f9fa;
+}
+.inputTodos button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  font-size: 2.5rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+::placeholder {
+  color: #6c757d;
+  opacity: 1;
+  font-size: 1.5rem;
+  padding: 1.5rem;
 }
