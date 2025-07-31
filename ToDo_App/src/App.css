@@ -29,12 +29,15 @@
   border: 1px solid #ccc;
   border-radius: 50px;
   background-color: #f8f9fa;
+  color: black;
 }
 .inputTodos button {
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
+  justify-context: center;
+  align-itmes: center;
   font-weight: 600;
   padding: 0.5rem 1rem;
   margin: 0.5rem;
