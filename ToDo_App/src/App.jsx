@@ -13,11 +13,16 @@ function App() {
     setTodo(prev => [...prev, newTodo])
     event.target.reset()
   } 
+
+  function removeTodo(index) {
+    setTodo(prev => [...prev.slice(0,index), ...prev.slice(index + 1)])
+  }
   
-  const todoList = todo.map(item => 
+  const todoList = todo.map((item, index) => 
       <div className='todo-box'>
-        <input type="checkbox" name={item} id={item} />
+        <input className='checklist' type="checkbox" name={item} id={item} />
         <p className='todo-text'>{item}</p>
+        <i className="material-icons" onClick={() => removeTodo(index)}>delete</i>
       </div>
       
   )

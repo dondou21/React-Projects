@@ -73,5 +73,30 @@
   margin:10px;
   box-shadow: 2px 1px 4px 1px rgba(194, 190, 190, 0.82);
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.checklist {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 2px solid #999;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.checklist:checked::after {
+  content: "✔";
+  position: absolute;
+  top: -2px;
+  left: 3px;
+  font-size: 16px;
+  color: black;
+}
+
+.material-icons {
+  color: red;
+  cursor: pointer;
 }
