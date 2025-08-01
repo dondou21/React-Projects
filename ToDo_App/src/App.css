@@ -30,6 +30,8 @@
   border-radius: 50px;
   background-color: #f8f9fa;
   color: black;
+  box-shadow: 1px 7px 12px -2px rgba(194, 190, 190, 0.82);
+
 }
 .inputTodos button {
   position: absolute;
@@ -54,4 +56,22 @@
   opacity: 1;
   font-size: 1.5rem;
   padding: 1.5rem;
+}
+
+.todo-text {
+  color: gray;
+  font-size: 2rem;
+  align-items: center;
+}
+
+.todo-box {
+  display: flex;
+  width: 500px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  margin:10px;
+  box-shadow: 2px 1px 4px 1px rgba(194, 190, 190, 0.82);
+  align-items: center;
+  justify-content: center;
 }

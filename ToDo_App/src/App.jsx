@@ -15,7 +15,11 @@ function App() {
   } 
   
   const todoList = todo.map(item => 
-    <li key={item}>{item}</li>
+      <div className='todo-box'>
+        <input type="checkbox" name={item} id={item} />
+        <p className='todo-text'>{item}</p>
+      </div>
+      
   )
 
   return (
@@ -26,10 +30,9 @@ function App() {
             <input type="text" placeholder='Add todo...' name="todo" />
             <button>+</button>
         </form>
-        
-        <ul className='todoList'>
+        <div className='todoList' >
           {todoList}
-        </ul>
+        </div>
       </div>
     </>
   )
