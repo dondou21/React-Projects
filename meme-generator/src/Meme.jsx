@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import './Meme.css'
 
 export default function Meme(props) {
     const [firstMeme, setFirstMeme] = useState("")
@@ -17,12 +18,24 @@ export default function Meme(props) {
     },[props.text1, props.text2])
 
     return (
-        <>
-          <h1>The memes component</h1>
-          <p>{props.text1}</p>
-          <p>{props.text2}</p>
-          {firstMeme && <img src={firstMeme} />}
-          {secondMeme && <img src={secondMeme} />}
-        </>
+    <>
+        <div className='meme'>
+            {firstMeme && (
+                <div className="img-container">
+                <img src={firstMeme} alt="Meme 1" />
+                <p className="top-text">{props.text1}</p>
+                </div>
+            )}
+
+            {secondMeme && (
+                <div className="img-container">
+                <img src={secondMeme} alt="Meme 2" />
+                <p className="top-text">{props.text2}</p>
+                </div>
+            )}
+        </div>
+        
+    </>
+
     )
 }

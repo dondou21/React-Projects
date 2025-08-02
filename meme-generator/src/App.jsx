@@ -24,14 +24,10 @@ function handleSubmit(event) {
         <section>
           <form onSubmit={handleSubmit} className="inputArea" >
             <input type="text" placeholder="...First text" name="firstText"/>
-          </form>
-          <form onSubmit={handleSubmit} className="inputArea">
             <input type="text" placeholder="...Second text" name="secondText"/>
+            <button type='submit'>Generate</button>
           </form>
-          <button>Generate</button>
         </section>
-        <h2>{firstText}</h2>
-        <h2>{secondText}</h2>
       </div>
 
       <Meme text1={firstText} text2={secondText} />
