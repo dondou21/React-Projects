@@ -1,33 +1,22 @@
-import { useState, useEffect } from 'react'
-import './App.css'
+import { useState, useEffect } from "react";
 
 function App() {
-  const [users, setUsers] = useState([])
+  const [users, setUssers] = useState([])
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch(" https://random-data-api.com/api/users/random_user?size=10")
     .then(res => res.json())
-    .then(data => setUsers(data))
-  },[] )
-
-  const userData = users.map((user) => {
-    return (
-      <li key={user.id} >{user.name}</li>
-      )
+    .then(data => setUssers(data))
+    .catch(err => console.log("Fetchin API failled", err))
   })
 
-    console.log(data)
-    console.log(788)
+  console.log(users)
   return (
-    <>
-      <div>
-        <h1>User's Name</h1>
-        <ul>
-          {userData}
-        </ul>
-      </div>
-    </>
+    <div>
+      <h1>Hey</h1>
+      <h2>{users}</h2>
+    </div>
   )
 }
 
-export default App
+export default App;
