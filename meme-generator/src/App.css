@@ -1,0 +1,33 @@
+
+.form-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    width: 350px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 1.8rem;
+}
+
+::placeholder {
+    color: gray;
+}
+
+button {
+    width: 100px;
+    border-radius: 15px;
+    background-color: blue;
+    font-size: 1.5rem;
+}
