@@ -1,3 +1,4 @@
+import Guess from "./Guess"
 
 function generateLetters() {
 
@@ -12,15 +13,19 @@ function generateLetters() {
 export default function Keyboard() {
     const alphabet = generateLetters()
 
-    const characters = alphabet.map((char) => (
-        <button key={char} className="char">{char}</button>
+    const characters = alphabet.map((char, index) => (
+        <button key={index} className="char">{char}</button>
     ))
    
 
     
     return (
-        <div className="characters">
-            {characters}
-        </div>
+        <>
+            <Guess />
+            <div className="characters">
+                {characters}
+            </div>
+        </>
+        
     )
 }

@@ -14,8 +14,9 @@
 }
 
 body {
-  display: grid;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .result {
@@ -23,12 +24,21 @@ body {
 }
 
 h1 {
+  display: flex;
   font-size: 3.2em;
   line-height: 1.1;
+  justify-content: center;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8rem;
 }
 
 .attempt {
   display: flex;
+  justify-content: center;
   gap: 1px;
 }
 
@@ -38,8 +48,10 @@ h1 {
 }
 
 .characters {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr)
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 790px;
   gap: 10px;
   margin-top: 80px;
 }
@@ -51,5 +63,20 @@ h1 {
   height: 70px;
   background-color: #ffb703;
   color: black;
+}
+.wordGuess {
+  font-size: 2.8rem;
+  font-weight: bold;
+  width: 70px;
+  height: 70px;
+  background-color: #676664ff;
+  color: white;
+}
+
+.guess {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 5rem;
 }
 
