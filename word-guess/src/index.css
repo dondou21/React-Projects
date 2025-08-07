@@ -74,9 +74,13 @@ p {
 }
 
 .guess {
-  display: flex;
+  display: grid;
   justify-content: center;
   gap: 1rem;
   padding-top: 5rem;
 }
 
+.wordArea {
+  display: flex;
+  justify-content: center;
+}

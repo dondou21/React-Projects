@@ -1,4 +1,4 @@
-import Guess from "./Guess"
+import { useState } from "react"
 
 function generateLetters() {
 
@@ -10,18 +10,24 @@ function generateLetters() {
 }
 
 
-export default function Keyboard() {
+export default function Keyboard({ onLetterClick }) {
+    const [letter, setLetter] = useState([])
     const alphabet = generateLetters()
 
+    const handleClick = (char) => {
+        onLetterClick(char)
+    }
+
     const characters = alphabet.map((char, index) => (
-        <button key={index} className="char">{char}</button>
+        <button key={index} className="char" onClick={() => handleClick(char)}>
+            {char}
+        </button>
     ))
    
 
     
     return (
         <>
-            <Guess />
             <div className="characters">
                 {characters}
             </div>
