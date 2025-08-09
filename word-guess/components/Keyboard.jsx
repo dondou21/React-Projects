@@ -11,7 +11,6 @@ function generateLetters() {
 
 
 export default function Keyboard({ onLetterClick }) {
-    const [letter, setLetter] = useState([])
     const alphabet = generateLetters()
 
     const handleClick = (char) => {
@@ -19,7 +18,8 @@ export default function Keyboard({ onLetterClick }) {
     }
 
     const characters = alphabet.map((char, index) => (
-        <button key={index} className="char" onClick={() => handleClick(char)}>
+        <button key={index} className="char" 
+        onClick={() => handleClick(char)}>
             {char}
         </button>
     ))
