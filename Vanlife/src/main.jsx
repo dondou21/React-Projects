@@ -1,8 +1,10 @@
+import "../server.js"
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Home from './Home.jsx'
 import About from './About.jsx'
+import Van from './Van.jsx'
 import './index.css'
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/about' element={<About />}/>
+          <Route path='/van' element={<Van />}/>
         </Routes>
       </main>
       
