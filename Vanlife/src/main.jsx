@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Home from './Home.jsx'
 import About from './About.jsx'
 import Van from './Van.jsx'
-// import VanDetail from './VanDetail.jsx'
+import VanDetail from './VanDetail.jsx'
 import './index.css'
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
           <Route path='/' element={<Home />}/>
           <Route path='/about' element={<About />}/>
           <Route path='/van' element={<Van />}/>
-          {/* <Route path='/van/:id' element={<VanDetail />}/> */}
+          <Route path='/van/:id' element={<VanDetail />}/>
         </Routes>
       </main>
       
