@@ -10,6 +10,7 @@ import Reducer from './Reducer.jsx'
 import Counter from './Counter.jsx'
 import Filtering from './Filtering.jsx'
 import Users from './Users.jsx'
+import RefPassword from './UseRefPassword.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -19,8 +20,9 @@ createRoot(document.getElementById('root')).render(
       <Counter />
     </ThemeProvider> 
     
-    <Filtering />*/}
+    <Filtering />
 
-      <Users />
+      <Users />*/}
+      <RefPassword />
   </StrictMode>,
 )
