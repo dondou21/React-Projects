@@ -5,9 +5,22 @@ import App from './App.jsx'
 import Fetch from './Fetch.jsx'
 import RefCounter from './RefCounter.jsx'
 import Password from './Password.jsx'
+import ThemeProvider from './Constext.jsx'
+import Reducer from './Reducer.jsx'
+import Counter from './Counter.jsx'
+import Filtering from './Filtering.jsx'
+import Users from './Users.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Password />
+    {/* <ThemeProvider>
+      <Password />
+      <Reducer />
+      <Counter />
+    </ThemeProvider> 
+    
+    <Filtering />*/}
+
+      <Users />
   </StrictMode>,
 )

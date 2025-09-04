@@ -1,4 +1,6 @@
-import { useState, useRef } from "react";
+import { useState, useRef, use } from "react";
+import { useContext } from "react";
+import { ThemeContext} from './Constext'
 
 export default function Password() {
     const [show, setShow] = useState(false)
@@ -7,6 +9,8 @@ export default function Password() {
     const [confirmPass, setConfirmPass] = useState('')
     const [submit, setSubmit] = useState(false)
     const inputRef = useRef(null)
+
+    const {theme, toggleTheme} = useContext(ThemeContext)
 
 
     // 🐵🙈
@@ -17,7 +21,7 @@ export default function Password() {
     }
 
     return (
-        <div>
+        <div style={{ background: theme === 'light' ? 'red' : 'blue'}}>
             <form onSubmit={handleSubmit} style={{ display: 'grid', gap: '1rem' }}>
                 <input 
                     type="text"
@@ -46,6 +50,12 @@ export default function Password() {
                 </button>
             </form>
             <h1>{   submit && ( pass.length < 6 ? "Password must be most than 6 characters" : "Profile created successfully " )}</h1>
+
+            <button 
+                onClick={toggleTheme}
+            >
+                Change Theme
+            </button>
         </div>
     )
     
